@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load subscriptions %}
+
+{% block title %} Subscriptions | Reread {% endblock %}
+
+{% block extra_head %}
+{% compress css %}
+<link rel="stylesheet" href="{% static 'reader/css/views/subscriptions.scss' %}" type="text/scss" charset="utf-8">
+{% endcompress %}
+{% endblock %}
+
+{% block content %}
+<script>
+  var subscribed_info = {
+  {% for source in source_list %}
+    "{{ source.id }}": {{ source|js_is_subscribed:reader }},
+  {% endfor %}
+  }
+</script>
+<section id="post">
+  <article class="post">
+    <h1 class="post_title">Subscriptions</h1>
+    <p>You can find all your subscriptions here. You can also add new RRS feed and make good use of them. Or if you get bored, </p>
+    <div id="start-reading" class="main-button"><a href="/reader">Start Reading</a></div>
+  </article>
+</section>
+<section id="post" class="new-rrs">
+  <h2>
+    Add New RSS Feed
+  </h2>
+  <article class="post">
+    <form class="new-rrs-form" action="/reader/subscriptions/" method="post">
+      {% csrf_token %}
+      {{ rss_form.as_p }}
+      <button class="main-button" type="submit" value="Submit">Add Feed</button>
+    </form>
+  </article>
+</section>
+<hr>
+<section id="posts">
+  {% for source in source_list %}
+  <article class="blog_post">
+    <h2 class="blog_post_title">
+      {{ source.title }}
+    </h2>
+    <!-- <p class="blog_post_content"> -->
+    <!--   There should be some descriptions ... -->
+    <!-- </p> -->
+    <button class="main-button" onclick="subscribe_or_unsubscribe('{{source.id}}')" id="source-button-{{ source.id }}">{% if source|is_subscribed:reader %}Unsubscribe{% else %}Subscribe{% endif %}</button>
+  </article>
+  {% endfor %}
+</section>
+
+{% endblock %}
+
+{% block extra_body %}
+<script type="text/javascript" src="{% static 'reader/js/subscriptions.js' %}"></script>
+{% endblock %}

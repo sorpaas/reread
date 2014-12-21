@@ -1,0 +1,12 @@
+/*  iPad
+ *  ---------------------------------------
+ *  same as normal displays
+ */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #scrollbubble {
+    position: absolute; }
+
+  ul > li {
+    background-position: left 12px; } }
+
+/*# sourceMappingURL=ipad.css.map */

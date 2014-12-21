@@ -1,0 +1,128 @@
+.arrow_nav {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: fixed;
+    background-color: #000;
+}
+
+.arrow_nav a {
+    display: block;
+    width: auto;
+    height: 1.88235em;
+    position: relative;
+    float: left;
+    padding: 0 8px;
+    font-size: 0.80952em;
+    line-height: 2.05882em;
+    color: #fff;
+    text-decoration: none;
+    outline: 0px none;
+}
+
+.arrow_nav .fa {
+    margin-top: 0.25em;
+}
+
+.arrow_nav a .symbol {
+    position: absolute;
+    top: 0;
+    font-size: 1.47059em;
+    line-height: 1.32em;
+}
+
+.arrow_nav a .tooltip {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 3px 8px;
+    line-height: 1em;
+    white-space: nowrap;
+    background-color: #eee;
+    color: #333;
+}
+
+.arrow_nav a .tooltip:after {
+    position: absolute;
+    top: -8px;
+    right: 13px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-bottom-color: #eee;
+    content: " ";
+}
+
+.arrow_nav a.previous .label {
+    padding-left: 16px;
+}
+
+.arrow_nav a.previous .symbol {
+    left: 8px;
+}
+
+.arrow_nav a .yellow {
+    color: #FF6 !important;
+}
+
+.arrow_nav a.next .label {
+    padding-right: 16px;
+}
+
+.arrow_nav a.next .symbol {
+    right: 8px;
+}
+
+.arrow_nav a:after {
+    display: inline-block;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    bottom: 4px;
+    background-color: #555;
+    content: '' !important;
+}
+
+.arrow_nav a:hover {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #FF6;
+    background-color: #000;
+}
+
+.arrow_nav a:hover .tooltip {
+    display: block;
+}
+
+.arrow_nav.top {
+    top: 8px;
+}
+
+.arrow_nav.bottom {
+    bottom: 8px;
+}
+
+.arrow_nav.right {
+    right: 20px;
+}
+
+.arrow_nav.left {
+    left: 8px;
+}
+
+.arrow_nav.bottom a .tooltip {
+    top: -30px;
+}
+
+.arrow_nav.bottom a .tooltip:after {
+    top: auto;
+    bottom: -8px;
+    border-bottom-color: transparent;
+    border-top-color: #eee;
+}

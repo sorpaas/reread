@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;AAIA,0EAA2E;EACzE,aAAc;IACV,QAAQ,EAAE,QAAQ;;EAGtB,OAAQ;IACJ,mBAAmB,EAAE,SAAS",
+"sources": ["ipad.scss"],
+"names": [],
+"file": "ipad.css"
+}

@@ -1,0 +1,20 @@
+/*
+ * FOOTER
+ */
+footer {
+  text-transform: lowercase;
+  font-size: 0.90476em;
+  line-height: 1.26316em;
+  margin-top: 3em; }
+  footer .section_separator {
+    margin-bottom: 1.52381em; }
+  footer > nav,
+  footer > span {
+    display: block;
+    text-align: center; }
+    footer > nav .lowercase,
+    footer > span .lowercase {
+      display: inline;
+      font-variant: normal;
+      text-transform: none;
+      font-size: 0.94737em; }

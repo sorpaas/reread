@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load compress %}
+{% load staticfiles %}
+{% load articles %}
+
+{% block head_title %}{{ article.title }} | Reread {% endblock %}
+
+{% block extra_head %}
+<meta name="article_id" content="{{ article.id }}" />
+<meta name="user_id" content="{{ user.id }}" />
+{% compress css %}
+<link rel="stylesheet" href="{% static 'reader/css/layouts/next-articles.scss' %}" type="text/scss" charset="utf-8">
+{% endcompress %}
+{% if history_link %}
+<script>
+  window.history.replaceState("{{ article.id }}", "{{ article.title }} | Reread", "{{ history_link }}");
+</script>
+{% endif %}
+{% block reader_extra_head %}
+{% endblock %}
+{% endblock %}
+
+{% block content %} {% endblock %}
+
+{% block arrow_topright %}
+
+{% if user.is_authenticated %}
+<a class="like-this" href="#">
+  <span class="label"><i class="fa fa-heart-o"></i></span>
+  <span class="tooltip">Like This</span>
+</a>
+{% endif %}
+
+{% block extra_arrownav %}
+{% endblock %}
+
+{% if article|is_hacker_news_article %}
+<a class="external-link" href="https://news.ycombinator.com/item?id={{ article.hackernews_id }}" target="_blank">
+  <span class="label"><i class="fa fa-comment"></i></span>
+  <span class="tooltip">Hacker News Comments</span>
+</a>
+{% endif %}
+
+<a id="next-button" href="{{ next_link | safe }}" class="next skiphover">
+  {% if user.is_authenticated %}
+  <span class="label">Next</span>
+  <span class="tooltip">Next Article</span>
+  {% else %}
+  <span class="label">Sign Up</span>
+  <span class="tooltip">Sign Up to Read More</span>
+  {% endif %}
+</a>
+
+{% endblock %}
+
+
+{% block extra_body %}
+
+{% if user.is_authenticated %}
+<nav class="next-articles">
+  <ul>
+    {% for article in predicted_articles %}
+    <div class="item">
+      <li><span class="score">{{article.1|floatformat:-2}}</span><a href="/reader/article/{{article.0.id}}">
+          {{article.0.title}}
+      </a></li>
+    </div>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
+
+{% compress js %}
+<script type="text/javascript" src="{% static 'reader/js/next-articles.js' %}"></script>
+<script type="text/javascript" src="{% static 'reader/js/statistics.js' %}"></script>
+{% endcompress %}
+
+{% block reader_extra_body %} {% endblock %}
+{% endblock %}

@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+.featured {
+    margin-bottom: 1em;
+}
+
+.featured * {
+    text-align: left !important;
+}
+
+.log-in a {
+    padding: 15px;
+    text-transform: lowercase !important;
+    font-weight: bold;
+    background-color: #FFF;
+    color: #000;
+    display: inline-block;
+}

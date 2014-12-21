@@ -1,0 +1,24 @@
+{% extends "reader/base.html" %}
+{% load staticfiles %}
+{% load compress %}
+
+{% block reader_extra_head %}
+{% compress css %}
+<link rel='stylesheet' id='form-manager-css-css' href='{% static 'reader/css/frame.css' %}' type='text/css' media='all' />
+{% endcompress %}
+{% endblock %}
+
+{% block outer_content %}
+<iframe class="content-frame" src="{{ article.url }}" frameborder="0" border="0"></iframe>
+{% endblock %}
+
+{% block extra_arrownav %}
+<a class="see-in-reader" href="{{ article_view_link }}">
+  <span class="label"><i class="fa fa-bars"></i></span>
+  <span class="tooltip">See In Reader</span>
+</a>
+{% endblock %}
+
+{% block reader_extra_body %}
+<script type="text/javascript" src="{% static 'reader/js/frame.js' %}"></script>
+{% endblock %}

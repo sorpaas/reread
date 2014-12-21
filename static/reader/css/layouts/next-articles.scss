@@ -1,0 +1,55 @@
+.next-articles {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: none;
+    position: fixed;
+    background-color: #000;
+    color: #FFF;
+    width: 500px;
+    right: 1.3em;
+    top: 8px;
+}
+
+.next-articles a {
+    padding: 0 8px;
+    font-size: 0.80952em;
+    margin-bottom: 6px;
+    color: #fff;
+    text-decoration: none;
+    outline: 0px none;
+}
+
+.next-articles .score {
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #eee;
+  color: #000;
+}
+
+.next-articles .item {
+
+}
+
+.next-articles a:hover {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #FF6;
+    background-color: #000;
+}
+
+.next-articles ul {
+  margin: 5px;
+  padding-top: 4px;
+}
+
+.next-articles li {
+  margin: 5px;
+  padding-left: 3px;
+  padding-bottom: 7px;
+  line-height: 1.1em;
+}

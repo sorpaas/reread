@@ -1,0 +1,19 @@
+.main-button, button.main-button {
+    padding: 15px;
+    background-color: #000;
+    border-width: 0px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.main-button a, button.main-button {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: normal !important;
+  text-transform: lowercase !important;
+}
+
+.main-button a:hover, button.main-button:hover {
+    color: #FF6 !important;
+}

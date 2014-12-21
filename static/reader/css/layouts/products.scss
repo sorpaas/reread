@@ -1,0 +1,56 @@
+/*
+ * PRODUCTS
+ */
+#products_page .product {
+  margin-bottom: 1em; }
+  #products_page .product h1 {
+    margin-bottom: 1em;
+    text-align: center;
+    font-style: italic; }
+
+/*
+ * Password protected form
+ */
+.fm-form input[type="text"],
+.fm-form input[type="password"],
+.passwordform input[type="text"],
+.passwordform input[type="password"] {
+  /*@include ellipsis();*/
+  width: 370px;
+  height: 1em;
+  padding: 0.52381em 0 0.28571em 10px;
+  float: left;
+  line-height: 1em; }
+.fm-form input::-webkit-input-placeholder,
+.passwordform input::-webkit-input-placeholder {
+  padding-top: 2px; }
+.fm-form input:-moz-placeholder,
+.passwordform input:-moz-placeholder {
+  padding-top: 2px; }
+.fm-form input[type="submit"],
+.passwordform input[type="submit"] {
+  width: 117px;
+  height: 2em;
+  margin-left: 9px;
+  padding: 0;
+  float: left;
+  font-size: 0.90476em;
+  line-height: 2.10526em; }
+.fm-form ul,
+.passwordform ul {
+  margin-left: 0; }
+  .fm-form ul li,
+  .passwordform ul li {
+    background: transparent; }
+
+.fm-form:before,
+.fm-form:after {
+  content: "";
+  display: table; }
+
+.fm-form:after {
+  clear: both; }
+
+/* For IE 6/7 (trigger hasLayout) */
+.fm-form {
+  *zoom: 1; }

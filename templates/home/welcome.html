@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+
+{% block title %} Welcome | Reread {% endblock %}
+
+{% block extra_head %}
+{% compress css %}
+<link rel="stylesheet" href="{% static 'reader/css/views/homepage.scss' %}" type="text/scss" charset="utf-8">
+{% endcompress %}
+{% endblock %}
+
+{% block content %}
+<section id="blog_post clearfix">
+  <section>
+    <div class="featured">
+      <p>Reread.io is a clean news reader that automatically learns your preference while you are reading. Read Hacker News, emails, and any RSS feed with ease.</p>
+    </div>
+  </section>
+  {% if user.is_authenticated %}
+  <span class="main-button"><a href="/reader">Start Reading</a></span>
+  <span class="main-button"><a href="/reader/subscriptions">Manage Subscriptions</a></span>
+  {% else %}
+  <span class="main-button"><a href="/accounts/signup/?next=%2Freader%2F">Sign Up</a></span>
+  <span class="log-in"><a href="/reader">Log In</a></span>
+  {% endif %}
+</section>
+
+{% endblock %}

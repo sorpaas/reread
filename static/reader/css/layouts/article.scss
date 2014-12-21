@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*
+ * ARTICLE
+ */
+#scrollbubble {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 500;
+  padding: 3px 15px;
+  text-align: center;
+  white-space: no-wrap;
+  background-color: #000;
+  color: #eee; }
+
+#scrollbubble:after {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  border: 4px solid transparent;
+  border-left-color: #000;
+  content: " "; }
+
+#bubbleLeft,
+#bubbleRight {
+  display: inline-block;
+  color: #eee;
+  font-size: 1.42857em;
+  line-height: 1.06667em;
+  text-decoration: none; }
+
+#bubbleLeft {
+  float: left; }
+
+#bubbleRight {
+  float: right; }
+
+#scrollBubbleText {
+  display: inline-block;
+  font-size: 18px !important; }
+  #scrollBubbleText a {
+    color: #eee; }
+
+.post .post_title,
+.post > h1 ~ h1,
+#about .post_title,
+#about > h1 ~ h1,
+#client .post_title,
+#client > h1 ~ h1 {
+  margin: 0;
+  font-size: 1.71429em;
+  font-style: italic;
+  line-height: 1.33333em;
+  text-align: center; }
+.post .post_author,
+#about .post_author,
+#client .post_author {
+  font-family: 'Nitti iA SC', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1em;
+  text-align: center; }
+.post h2,
+.post .project_summary h2,
+#about h2,
+#about .project_summary h2,
+#client h2,
+#client .project_summary h2 {
+  font-family: 'Nitti iA', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: left;
+  font-size: 1.19048em;
+  line-height: 1.4em; }
+.post h2 ~ h2,
+#about h2 ~ h2,
+#client h2 ~ h2 {
+  /* targets the rest of the h2's */
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.33333em;
+  font-style: italic;
+  text-align: center; }
+.post h3,
+#about h3,
+#client h3 {
+  margin-top: 2em;
+  margin-bottom: 0;
+  text-align: left; }
+.post h2 + h3,
+#about h2 + h3,
+#client h2 + h3 {
+  margin-top: -0.7619em; }
+.post img,
+.post object,
+.post embed,
+#about img,
+#about object,
+#about embed,
+#client img,
+#client object,
+#client embed {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin: 1.14286em auto; }
+.post iframe,
+#about iframe,
+#client iframe {
+  display: block;
+  position: relative;
+  max-width: 100%; }
+.post hr,
+#about hr,
+#client hr {
+  height: 1px;
+  border: 0;
+  margin: 2.66667em 54px 1.14286em 54px;
+  background-color: #ccc; }
+.post .wp-caption,
+#about .wp-caption,
+#client .wp-caption {
+  width: 100% !important;
+  margin: 1.14286em 0; }
+  .post .wp-caption iframe,
+  .post .wp-caption img,
+  .post .wp-caption object,
+  .post .wp-caption embed,
+  #about .wp-caption iframe,
+  #about .wp-caption img,
+  #about .wp-caption object,
+  #about .wp-caption embed,
+  #client .wp-caption iframe,
+  #client .wp-caption img,
+  #client .wp-caption object,
+  #client .wp-caption embed {
+    margin-top: 0;
+    margin-bottom: 0; }
+.post .wp-caption-text,
+#about .wp-caption-text,
+#client .wp-caption-text {
+  margin-top: 0.53333em;
+  font-size: 0.71429em;
+  font-style: italic;
+  line-height: 1.6em;
+  text-align: center; }
+.post .alert,
+#about .alert,
+#client .alert {
+  font-style: italic; }
+.post .wp-smiley,
+#about .wp-smiley,
+#client .wp-smiley {
+  display: inline;
+  margin: 0; }
+.post .post_fleuron,
+#about .post_fleuron,
+#client .post_fleuron {
+  margin-top: 2em;
+  letter-spacing: .5em;
+  display: block;
+  line-height: 1em;
+  text-align: center; }
+
+.post figure {
+  margin-bottom: 0.7619em; }
+  .post figure blockquote {
+    margin-bottom: 0; }
+  .post figure blockquote:before {
+    content: "\201C"; }
+  .post figure blockquote:after {
+    content: "\201D"; }
+  .post figure figcaption {
+    padding-left: 22px;
+    margin: 0.5em 54px 0 54px;
+    font-size: 0.7619em;
+    font-style: italic;
+    line-height: 1.5em; }
+  .post figure blockquote + figcaption:before {
+    content: 'â€”';
+    padding-right: 4px; }
+
+/* Fix FidVid objects */
+.fluid-width-video-wrapper {
+  margin: 1.14286em auto; }
+  .fluid-width-video-wrapper object,
+  .fluid-width-video-wrapper embed {
+    margin-top: 0;
+    margin-bottom: 0; }

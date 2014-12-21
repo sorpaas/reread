@@ -1,0 +1,177 @@
+/* FONT-FACE DEFINITIONS */
+@font-face {
+  font-family: 'iABCRegularSC';
+  src: url("./fonts/smallcaps/0/iabc-sc-webfont.eot");
+  src: url("./fonts/smallcaps/0/iabc-sc-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/smallcaps/0/iabc-sc-webfont.svg#iABCRegular") format("svg"), url("./fonts/smallcaps/0/iabc-sc-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* WINDOWS DEFINITIONS */
+body,
+input,
+textarea,
+.customStyleSelect,
+#message_wrapper input,
+#message_wrapper textarea {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal; }
+
+/*
+blockquote,
+i,
+em,
+h3,
+.client_quote,
+.product_quote,
+.project_image figcaption,
+.project_slideshow_wrapper figcaption,
+.slideshow .slide_title,
+.blog_post .blog_post_title,
+.post .post_title,
+.post h2 ~ h2 {
+	@include windows-type-italic;
+}
+*/
+.section_separator,
+input[type="submit"],
+footer,
+.more_link,
+.client_description_anchors,
+.client_description span,
+#other_clients .chrono_clients,
+#offices .contact h2,
+#footer_bottom #cancel_button,
+#footer_bottom input[type="submit"],
+#search_form input[type="submit"],
+#message_wrapper .right label,
+#scrollbubble,
+.post .post_author,
+.project_image figcaption span,
+.arrow_nav a {
+  font-family: Georgia, serif;
+  font-size: 75%;
+  text-transform: uppercase; }
+
+.section_separator,
+.section_separator:before {
+  line-height: 24px;
+  before: "µµµµµµµ"; }
+  .section_separator .before,
+  .section_separator:before .before {
+    line-height: 24px; }
+
+.client_description_anchors * {
+  font-size: 1em; }
+
+.symbol {
+  visibility: hidden; }
+
+#scrollbubble {
+  filter: none;
+  font-size: 15px; }
+
+.post_fleuron {
+  display: none; }
+
+.arrow_nav a {
+  font-size: 0.571em;
+  line-height: 2.917em;
+  height: 2.667em; }
+  .arrow_nav a .symbol {
+    font-size: 25px;
+    line-height: 1.28em; }
+
+#offices .contact h2 {
+  font-size: 1em; }
+
+#message_wrapper input,
+#message_wrapper textarea {
+  filter: none; }
+#message_wrapper .right label {
+  width: 80px;
+  font-size: 0.571em;
+  height: 2.667em;
+  line-height: 3em; }
+#message_wrapper .right input {
+  width: 195px;
+  min-width: 195px;
+  max-width: 402px;
+  height: 1.524em;
+  line-height: 1.524em; }
+
+#footer_bottom input[type="submit"],
+#footer_bottom #cancel_button {
+  font-size: 0.571em;
+  height: 2.5em;
+  line-height: 2.5em; }
+
+#search_form input[type="submit"] {
+  font-size: 0.571em;
+  height: 3.083em;
+  line-height: 3.083em; }
+
+footer {
+  font-size: 0.667em;
+  line-height: 1.714em; }
+
+.ie .slideshow_nav_left {
+  display: block;
+  position: relative; }
+.ie .slideshow_nav_middle {
+  position: absolute;
+  top: 50%; }
+.ie .slideshow_nav_button {
+  position: absolute;
+  top: -50%; }
+.ie #scrollbubble {
+  display: none !important; }
+.ie #search_form {
+  display: block;
+  width: 510px;
+  margin: 0 auto; }
+  .ie #search_form input[type="text"] {
+    height: 18px; }
+.ie #message_wrapper .right input,
+.ie #message_wrapper textarea {
+  font-size: 0.8em;
+  overflow-x: visible; }
+.ie #message_wrapper .right input {
+  height: 32px;
+  line-height: 32px; }
+.ie #message_wrapper .message.wpcf7-form-control-wrap {
+  width: 100%; }
+.ie #footer_bottom input[type="submit"],
+.ie #footer_bottom #cancel_button {
+  padding: 0; }
+.ie #footer_bottom input[type="submit"] {
+  height: 32px !important;
+  line-height: 27px !important; }
+
+@media only screen and (max-width: 480px) {
+  .arrow_nav a {
+    text-indent: -9999px; }
+    .arrow_nav a .tooltip {
+      text-indent: 0; }
+
+  .arrow_nav a.previous {
+    background: url("../images/wp7/black_nav_arrow_left.png") no-repeat center center; }
+
+  .arrow_nav a.next {
+    background: url("../images/wp7/black_nav_arrow_right.png") no-repeat center center; }
+
+  .slideshow_nav_button {
+    text-indent: -9999px; }
+
+  .slideshow_nav_left .slideshow_nav_button {
+    background: url("../images/wp7/nav_arrow_left.png") no-repeat center 22px; }
+
+  .slideshow_nav_right .slideshow_nav_button {
+    background: url("../images/wp7/nav_arrow_right.png") no-repeat center 22px; }
+
+  .section_separator {
+    background: url("../images/wp7/dotted_bar.png") repeat-x; }
+
+  .section_separator:before {
+    content: ''; } }

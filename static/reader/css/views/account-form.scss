@@ -1,0 +1,34 @@
+@charset 'utf-8';
+
+.account h2 {
+    text-align: center !important;
+}
+
+.account-form {
+    margin-top: 1em;
+}
+
+.account-form p {
+    margin-bottom: 0.3em;
+}
+
+.account-form p label {
+    display: none;
+}
+
+.account-form p input {
+    margin: 0 auto;
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.account-form button {
+    margin-top: 0.7em !important;
+    margin: 0 auto;
+    display: block;
+}
+
+#id_remember {
+    display: none;
+}

@@ -1,0 +1,95 @@
+{% load staticfiles %}
+{% load compress %}
+{% load url from future %}
+
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html class="ie" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if ! lt IE 8 ]><!-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <title>{% block head_title %}Reread{% endblock %}</title>
+
+  <script src="//use.typekit.net/tac1aoz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  {% compress css %}
+  <link rel="stylesheet" href="{% static 'reader/css/normalize.css' %}" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/clearfix.css' %}" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/core.css' %}" type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/header.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/footer.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/article.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/blog.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/clients.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/products.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/layouts/arrow-nav.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/components/button.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/override.css' %}"
+        type="text/css" charset="utf-8">
+
+  <link rel="stylesheet" href="{% static 'reader/css/media/ipad.scss' %}" type="text/scss" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'reader/css/media/iphone.scss' %}" type="text/scss" charset="utf-8">
+
+  <link rel="stylesheet" href="{% static 'reader/vendor/font-awesome-4.2.0/css/font-awesome.min.css' %}" type="text/css" charset="utf-8">
+  {% endcompress %}
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  {% block extra_head %}
+  {% endblock %}
+</head>
+<body>
+  {% block body %}
+
+  {% block outer_content %}
+  <article id="content">
+    <header>
+      <a id="logo" href="/"><img src="{% static 'reader/img/logo.png' %}"></a>
+    </header>
+    {% if messages %}
+    <section class="messages">
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+    {% block content %} {% endblock %}
+    <footer>
+      <nav>
+        <a href="/">Home</a>&nbsp;|&nbsp;<a href="/about">About Us</a>&nbsp;|&nbsp;<a href="http://blog.reread.io">Blog</a>
+      </nav>
+      <span>&copy;&nbsp;2014 sorpa'as plat</span>
+    </footer>
+  </article><!-- end of #content -->
+  {% endblock %}
+
+  <nav class="arrow_nav right top">
+    {% block arrow_topright %}{% endblock %}
+  </nav>
+
+  {% compress js %}
+  <script type='text/javascript' src='{% static 'reader/js/jquery.min.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/jquery.scroll.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/bubble.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/jquery.validate.min.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/main-1.1.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/jquery.fitvids.js' %}'></script>
+  <script type='text/javascript' src='{% static 'reader/js/post.js' %}'></script>
+  {% endcompress %}
+  {% block extra_body %}{% endblock %}
+  {% endblock %}
+</body>
+</html>

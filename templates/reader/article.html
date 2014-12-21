@@ -1,0 +1,30 @@
+{% extends "reader/base.html" %}
+
+{% block content %}
+
+<div id="scrollbubble"><span id="scrollBubbleText"></span></div>
+<section id="post">
+  <article class="post">
+    <h1 class="post_title">{{ article.title }}</h1>
+    <div class="date">
+      <span>{{ article.published_at }}</span>
+    </div>
+    {{ article.content_html | safe}}
+  </article>
+</section>
+
+{% endblock %}
+
+{% block extra_arrownav %}
+{% if article.is_framing_allowed %}
+<a class="see-in-reader" href="{{ frame_view_link }}">
+  <span class="label"><i class="fa fa-external-link"></i></span>
+  <span class="tooltip">See in Frame</span>
+</a>
+{% else %}
+<a class="external-link" href="{{ article.url }}" target="_blank">
+  <span class="label"><i class="fa fa-external-link"></i></span>
+  <span class="tooltip">Original Page</span>
+</a>
+{% endif %}
+{% endblock %}

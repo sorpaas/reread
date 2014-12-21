@@ -1,0 +1,35 @@
+/*
+ * CLIENTS
+ */
+/*
+ * CLIENT
+ */
+#client > section {
+  margin-bottom: 1em; }
+
+#project_summary * {
+  margin: 0;
+  padding: 0; }
+
+#project_briefing p {
+  margin-bottom: 0; }
+
+#summary .client_quote {
+  margin-bottom: 0;
+  margin-top: 3em; }
+
+.project_image {
+  margin: 1em 0; }
+  .project_image img {
+    margin: 0; }
+  .project_image figcaption {
+    font-style: italic;
+    font-size: 0.71429em;
+    line-height: 1.6em;
+    text-align: center; }
+    .project_image figcaption span {
+      font-family: 'Nitti iA SC', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-transform: lowercase; }
+
+#all_clients .featured {
+  color: #7e7e7e; }
