@@ -9,7 +9,7 @@ hosted version of Reread can be found at [reread.io](http://reread.io).
 * Read RSS Feed
 * Hackable
 * A Little Bit Machine Learning
-* Subscriptions.
+* Subscriptions
 
 ## Why Another News Reader?
 
