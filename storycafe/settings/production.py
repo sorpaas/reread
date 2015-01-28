@@ -70,16 +70,16 @@ ANONYMOUS_USER_ID = -1
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'storycafe',
-        'USER': 'postgres',
-        'PASSWORD': '',
+        'NAME': 'reread',
+        'USER': 'reread',
+        'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': '5432'
     }
 }
 
 from mongoengine import connect
-connect('storycafe', host='mongo', port=27017)
+connect('reread', host='mongo', port=27017)
 
 # Internationalization
 

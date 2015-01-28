@@ -1,3 +1,4 @@
 .db
 .mongo
 .sass-cache
+.docker
