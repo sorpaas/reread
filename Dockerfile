@@ -14,4 +14,4 @@ ADD . /app
 WORKDIR /app
 
 EXPOSE 8000
-CMD /app/build/storycafe-start.sh
+CMD /app/scripts/storycafe-start.sh
