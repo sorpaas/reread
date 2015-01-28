@@ -13,5 +13,6 @@ RUN mkdir /app
 ADD . /app
 WORKDIR /app
 
+ENV PATH /.gem/ruby/2.2.0/bin:$PATH
 EXPOSE 8000
 CMD /app/scripts/storycafe-start.sh
