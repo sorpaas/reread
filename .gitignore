@@ -61,3 +61,5 @@ docs/_build/
 # CSS Cache
 .sass-cache
 static/CACHE
+
+.docker/

@@ -29,7 +29,7 @@ daemon:
     - mongo
   volumes:
     - ".:/app"
-  command: python daemon.py
+  command: /app/scripts/daemon-start.sh
   environment:
     DJANGO_SETTINGS_MODULE: storycafe.settings.development
     SECRET_KEY: yourawesomesecretkey

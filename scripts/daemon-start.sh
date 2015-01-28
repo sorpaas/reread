@@ -6,7 +6,7 @@ done
 
 python manage.py migrate
 
-until python manage.py runserver --insecure 0.0.0.0:8000; do
+until python daemon.py; do
     echo "Server dies, restarting ..."
     sleep 1
 done
