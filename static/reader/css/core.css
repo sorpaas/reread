@@ -188,6 +188,7 @@ input[type="submit"] {
   text-align: center; }
 
 code {
+  max-height: 1.3125em;
   padding: 0.5em;
   font-size: 0.7em;
   background-color: #f5f5f5;
