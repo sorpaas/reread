@@ -63,3 +63,5 @@ docs/_build/
 static/CACHE
 
 .docker/
+
+docker-compose.production.yml

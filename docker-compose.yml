@@ -1,0 +1,44 @@
+web:
+  build: .
+  links:
+    - db
+    - mongo
+  ports:
+    - "3020:8000"
+  command: python manage.py runserver --insecure 0.0.0.0:8000
+  environment:
+    DJANGO_SETTINGS_MODULE: storycafe.settings.development
+    SECRET_KEY: "mytopsecretkey"
+    REREAD_HOST: "localhost:3020"
+db:
+  image: postgres
+  restart: always
+  volumes_from:
+    - dbdata
+  environment:
+    POSTGRES_USER: reread
+    POSTGRES_PASSWORD: postgres
+mongo:
+  image: mongo
+  restart: always
+  volumes_from:
+    - mongodata
+daemon:
+  build: .
+  restart: always
+  links:
+    - db
+    - mongo
+  command: python daemon.py
+  environment:
+    DJANGO_SETTINGS_MODULE: storycafe.settings.development
+    SECRET_KEY: "mytopsecretkey"
+    REREAD_HOST: "localhost:3020"
+dbdata:
+  image: debian:7.7
+  volumes:
+    - "/var/lib/postgresql/data"
+mongodata:
+  image: debian:7.7
+  volumes:
+    - "/data/db"

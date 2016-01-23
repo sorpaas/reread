@@ -1,6 +1,5 @@
 {% load staticfiles %}
 {% load compress %}
-{% load url from future %}
 
 <!DOCTYPE html>
 <!--[if lt IE 8]>
@@ -70,7 +69,7 @@
       <nav>
         <a href="/">Home</a>&nbsp;|&nbsp;<a href="/about">About Us</a>&nbsp;|&nbsp;<a href="http://blog.reread.io">Blog</a>
       </nav>
-      <span>&copy;&nbsp;2014 sorpa'as plat</span>
+      <span>&copy;&nbsp;2016 Wei Tang, a project of <a href="https://id.hn">The Identity</a>.</span>
     </footer>
   </article><!-- end of #content -->
   {% endblock %}
@@ -90,5 +89,22 @@
   {% endcompress %}
   {% block extra_body %}{% endblock %}
   {% endblock %}
+
+  <!-- Piwik -->
+  <script type="text/javascript">
+   var _paq = _paq || [];
+   _paq.push(['trackPageView']);
+   _paq.push(['enableLinkTracking']);
+   (function() {
+       var u="//piwik.beyond.codes/";
+       _paq.push(['setTrackerUrl', u+'piwik.php']);
+       _paq.push(['setSiteId', 11]);
+       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+   })();
+  </script>
+  <noscript><p><img src="//piwik.beyond.codes/piwik.php?idsite=11" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+
 </body>
 </html>
