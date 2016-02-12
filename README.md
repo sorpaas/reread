@@ -3,7 +3,7 @@ Reread: Yet Another Hacker News Reader
 Reread is my personal Hacker News Reader. It is hackable and easy to deploy. A
 hosted version of Reread can be found at [reread.id.hn](http://reread.id.hn/).
 
-![Reread Screenshot](https://cdn.source.id.hn/file/data/xpbmrg3mussgttifodwq/PHID-FILE-vqcl2nmdqqos2fsiz4aj/5y7wi6pjaw7terfu/Reread_Screenshot)
+{F2893}
 
 ## Features
 
